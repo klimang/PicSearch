@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  picsearchapi:
+    image: ${DOCKER_REGISTRY-}picsearchapi
+    build:
+      context: .
+      dockerfile: PicSearchAPI/Dockerfile
+  proxy:
+   image: nginx:mainline
+
+  postgreSQL:
+     image: postgres:latest
+
+
